@@ -1,0 +1,15 @@
+:root{--accent:#00E0FF;--bg:#0B0F14;--bg2:#111823;--text:#E6F1FF;--muted:#7F9BB3;--ok:#21D07A;--warn:#FFB020;--bad:#FF4D4F;}
+html,body{background:var(--bg) !important;}
+.block-container{padding-top:1rem; max-width:1400px;}
+h1,h2,h3,h4{color:var(--text) !important; letter-spacing:.2px;}
+.stTabs [role="tablist"] {border-bottom:1px solid #1e2a38;}
+.stTabs [role="tab"] {color:var(--muted); padding:10px 16px; border-radius:6px 6px 0 0; background:linear-gradient(180deg,#0f1621,#0b0f14); margin-right:8px; border:1px solid #1a2633; border-bottom:none;}
+.stTabs [aria-selected="true"]{color:var(--text); box-shadow:0 0 0 1px #1a2633 inset, 0 -2px 0 0 var(--accent) inset;}
+.stDataFrame, .stTable{border:1px solid #1a2633; border-radius:8px; background:var(--bg2);}
+div[data-testid="stMetric"] {background:linear-gradient(180deg,#0f1621,#0b0f14); padding:12px 14px; border:1px solid #1a2633; border-radius:10px; box-shadow:0 0 0 1px #0b2530 inset;}
+div[data-testid="stMetric"] [data-testid="stMetricDelta"] {color:var(--ok) !important;}
+.stButton>button{background:linear-gradient(180deg,#0d1b26,#0a131a); color:var(--text); border:1px solid #133040; border-radius:8px;}
+.stButton>button:hover{border-color:var(--accent); box-shadow:0 0 12px rgba(0,224,255,.25);}
+hr{border-color:#1a2633;}
+.card{background:linear-gradient(180deg,#0f1621,#0b0f14); border:1px solid #1a2633; border-radius:12px; padding:14px; box-shadow:0 10px 30px rgba(0,0,0,.35), 0 0 0 1px #0b2530 inset;}
+.glow{box-shadow:0 0 0 1px #102a33 inset, 0 0 18px rgba(0,224,255,.18); border-radius:12px;}

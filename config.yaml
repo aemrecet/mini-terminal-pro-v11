@@ -1,0 +1,40 @@
+data:
+  start_date: "2018-01-01"
+  target_threshold: 0.0
+
+model:
+  base_symbols: ["SPY"]
+  features: ["return","ma5","ma10","ma20","vol21","mom5"]
+  lgb_params:
+    objective: "binary"
+    metric: "auc"
+    seed: 42
+    learning_rate: 0.05
+    num_leaves: 31
+    verbosity: -1
+  num_boost_round: 300
+
+signal:
+  proba_buy_threshold: 0.55
+  proba_sell_threshold: 0.45
+  sentiment_weight: 0.3
+  model_weight: 0.7
+  sentiment_lookback_days: 3
+  news_refresh_seconds: 60
+  sentiment_alert_threshold: 0.4
+
+universe_files:
+  bist: "tickers/bist_full.csv"
+  sp500: "tickers/sp500.csv"
+  nasdaq: "tickers/nasdaq_all.csv"
+
+portfolio:
+  rebalance: "daily"
+  method: "equal"
+  fee_bp: 10
+  slippage_bp: 5
+
+binance:
+  quote: "USDT"
+  top_n: 30
+  bars: 365

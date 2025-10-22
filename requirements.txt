@@ -1,0 +1,17 @@
+streamlit
+pandas
+numpy
+plotly
+yfinance
+python-dotenv
+requests
+lxml
+finnhub-python
+lightgbm
+scikit-learn
+joblib
+nltk
+vaderSentiment
+deep-translator
+pyyaml
+websocket-client
